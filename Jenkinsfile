@@ -12,10 +12,7 @@ pipeline{
         stage("Checkout SCM"){
         when { expression {  params.action == 'create' } }
         steps{
-            gitCheckout(
-                branch: "master",
-                url: "https://github.com/pratikkambl3/HELLO-APP.git"
-            )
+            sh' git clone https://github.com/pratikkambl3/HELLO-APP.git'
             }
         }
         stage("Unit Test Maven"){
