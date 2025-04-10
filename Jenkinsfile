@@ -32,7 +32,7 @@ pipeline{
 
             steps{
                script{
-                   mvn clean package
+                   mvn clean package;
                    //mvnTest()
                }
             }
