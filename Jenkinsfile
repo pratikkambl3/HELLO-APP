@@ -9,7 +9,7 @@ pipeline{
         string(name: 'DockerHubUser', description: "name of the Application", defaultValue: 'pratikkambl3')
     }
     triggers {
-  cron '* * * * *'
+  pollscm '* * * * *'
 }
 
     stages{
