@@ -8,9 +8,12 @@ pipeline{
         string(name: 'ImageTag', description: "tag of the docker build", defaultValue: 'v1')
         string(name: 'DockerHubUser', description: "name of the Application", defaultValue: 'pratikkambl3')
     }
-    triggers {
-  pollscm '* * * * *'
+ triggers {
+  pollSCM '* * * * *'
 }
+
+
+
 
     stages{
         stage("Checkout SCM"){
