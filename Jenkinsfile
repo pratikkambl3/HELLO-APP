@@ -1,11 +1,6 @@
 @Library('my-shared-library') _
 pipeline{
-   agent {
-   docker {
-    image 'abhishekf5/maven-abhishek-docker-agent:v1'
-    args '--user root -v /var/run/docker.sock:/var/run/docker.sock'
-    }
-  }
+  agent any
     parameters{
 
         choice(name: 'action', choices: 'create\ndelete', description: 'Choose create/Destroy')
