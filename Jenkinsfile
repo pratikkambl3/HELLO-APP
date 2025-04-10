@@ -31,10 +31,10 @@ pipeline{
             when { expression {  params.action == 'create' } }
 
             steps{
-               script{
-                   mvn clean package;
+               //script{
+                sh'mvn clean package'
                    //mvnTest()
-               }
+               //}
             }
         } 
         stage('Integration Test maven'){
